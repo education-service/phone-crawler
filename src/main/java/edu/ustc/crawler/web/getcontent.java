@@ -8,6 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class getcontent {
+
 	public static String res = "", a = "";
 
 	public static String gethtml(String uurl) throws IOException {
@@ -32,15 +33,16 @@ public class getcontent {
 
 		System.out.println("=======" + result);
 
-		//		  Document doc;  
+		//		  Document doc;
 		//	      doc = Jsoup.parse(line);
 		//	      System.out.println("bbbbb"+doc.body().text());
 		//	      Elements div = doc.select("div.second-sum-cont");
 		//	      a=div.text();
 		//	    //  res=a+res;
-		//		
-		//		 is.close();	
+		//
+		//		 is.close();
 		//		 System.out.println("******"+a);
 		return res;
 	}
+
 }

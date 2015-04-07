@@ -8,9 +8,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Vector;
 
-public class zwfc { //公共类                       //公共类
+public class zwfc {
+	//公共类
 	//public  String  sseq;
 	//public  Sequence pku_test;
+
 	public void getresult(String path) {
 		try {
 			FileInputStream fis = new FileInputStream(path); //定义输入流对象加载要分词的文件
@@ -35,15 +37,17 @@ public class zwfc { //公共类                       //公共类
 		zwfc aw = new zwfc();
 		aw.getresult("E:\\mmm2.txt");
 	}
+
 }
 
 class Sequence { //实现分词的类
+
 	static final int WORD_MAX_LENGTH = 9; //定义每次比较的最大字长
 	//定义一个Vector对象把词表中的词存储在一个Vector对象中
 	static Vector ve = new Vector();
 
 	FileWriter FW = new FileWriter("E:\\m2m.txt", true);
-	//public static 
+	//public static
 	public static String seq;
 
 	public Sequence() throws IOException {

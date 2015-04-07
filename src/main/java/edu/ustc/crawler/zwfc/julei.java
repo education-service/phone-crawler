@@ -19,9 +19,9 @@ public class julei {
 			FileReader fr = new FileReader(file);
 			BufferedReader br = new BufferedReader(fr);
 			//strXmlLine = br.readLine();
-			//String regEx=" [\u4e00-\u9fa5]";   
-			//Pattern p = Pattern.compile(regEx);   
-			//Matcher m = p.matcher(strXmlLine);   
+			//String regEx=" [\u4e00-\u9fa5]";
+			//Pattern p = Pattern.compile(regEx);
+			//Matcher m = p.matcher(strXmlLine);
 			//String a=m.replaceAll("").trim();
 
 			while ((strXmlLine = br.readLine()) != null) {
@@ -35,9 +35,9 @@ public class julei {
 
 			b = b.replaceAll("\\d+", "");
 			System.out.println(b);
-			//String regEx="[^0-9]";   
-			// Pattern p = Pattern.compile(regEx);   
-			// Matcher m = p.matcher(b);   
+			//String regEx="[^0-9]";
+			// Pattern p = Pattern.compile(regEx);
+			// Matcher m = p.matcher(b);
 			// String a=m.replaceAll("").trim();
 			//System.out.println(a);
 			//num=Integer.parseInt(a);
@@ -56,4 +56,5 @@ public class julei {
 		//Sequence pku_test=new Sequence(pku)
 		dc.getweb("E:\\mmm2.txt");
 	}
+
 }

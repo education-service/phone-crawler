@@ -21,6 +21,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 public class gethtml {
+
 	public static String res = "", a = "";
 
 	public static String Gethtml(String uurl) throws IOException {
@@ -53,27 +54,27 @@ public class gethtml {
 
 		is.close();
 		System.out.println("******" + res);
-		return res;
 
+		return res;
 	}
 
-	/** 
-	 * 根据URL获得所有的html信息 
-	 * @param url 
-	 * @return 
+	/**
+	 * 根据URL获得所有的html信息
+	 * @param url
+	 * @return
 	 */
 	public static String Gethtmll(String url) {
 		String html = "";
-		HttpClient httpClient = new DefaultHttpClient();//创建httpClient对象  
-		HttpGet httpget = new HttpGet(url);//以get方式请求该URL  
+		HttpClient httpClient = new DefaultHttpClient();//创建httpClient对象
+		HttpGet httpget = new HttpGet(url);//以get方式请求该URL
 		try {
-			HttpResponse responce = httpClient.execute(httpget);//得到responce对象  
-			int resStatu = responce.getStatusLine().getStatusCode();//返回码  
-			if (resStatu == HttpStatus.SC_OK) {//200正常  其他就不对  
-				//获得相应实体  
+			HttpResponse responce = httpClient.execute(httpget);//得到responce对象
+			int resStatu = responce.getStatusLine().getStatusCode();//返回码
+			if (resStatu == HttpStatus.SC_OK) {//200正常  其他就不对
+				//获得相应实体
 				HttpEntity entity = responce.getEntity();
 				if (entity != null) {
-					html = EntityUtils.toString(entity);//获得html源代码  
+					html = EntityUtils.toString(entity);//获得html源代码
 					System.out.println("******" + html);
 				}
 			}

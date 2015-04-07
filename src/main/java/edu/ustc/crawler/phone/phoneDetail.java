@@ -17,10 +17,11 @@ import edu.ustc.crawler.sql.Update_mysql;
 import edu.ustc.crawler.zwfc.Crawler;
 
 public class phoneDetail {
+
 	private static String BASE_XPATH = "//*[@id=\"";
 	private static String SUFFIX_XPATH = "\"]/div[1]";
 	private static String SE_XPATH = "\"]/div[1]/div[2]/div[1]";
-	//private  String baseurl1="http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=530180782%40qq.com%20&rsv_pq=c78e320500021ac6&rsv_t=e01czvoDW99AvvyKJeA8rpJPmhuj4lA6bDv1PAWzPwwRYuwXcjq7ktO9KAM&rsv_enter=0&rsv_sug3=1&rsv_sug4=520&rsv_sug1=1";
+	// private  String baseurl1="http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=530180782%40qq.com%20&rsv_pq=c78e320500021ac6&rsv_t=e01czvoDW99AvvyKJeA8rpJPmhuj4lA6bDv1PAWzPwwRYuwXcjq7ktO9KAM&rsv_enter=0&rsv_sug3=1&rsv_sug4=520&rsv_sug1=1";
 	private Crawler crawler;
 	public int k = 0;
 	public static String NO_MSG = "null";
@@ -227,7 +228,7 @@ public class phoneDetail {
 					strname = matcher_detail6.group();
 					System.out.println("///name" + matcher_detail6.group());
 				}
-				//strname="";  	  
+				//strname="";
 
 				/******匹配网址*******************/
 				Pattern patt_detail8 = Pattern.compile("网址：(.*?) ");
@@ -275,7 +276,6 @@ public class phoneDetail {
 			//	            	 System.out.println("*&&&&2"+selNum+ strtelephone+ straddress+strqq+stremail);
 			//	  				 xiaohe.insert("telephoneresult",selnum, strname,  strtelephone, straddress, strqq, stremail, "");
 			//	             	      }
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

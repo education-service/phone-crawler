@@ -10,9 +10,8 @@ public class select_sql {
 	public int count = 0;
 	public String sql = "";
 
-	public int select(int choice, String name_title, String querynum)
-	//String signname,String realname,String nickname,String lianxiren,String age,String sex,String telephonenum,String phonepicture,String address,String duty,String area,String qq,String email,String websource,String dataresource,String deletedd)
-	{
+	public int select(int choice, String name_title, String querynum) {
+		//String signname,String realname,String nickname,String lianxiren,String age,String sex,String telephonenum,String phonepicture,String address,String duty,String area,String qq,String email,String websource,String dataresource,String deletedd)
 		System.out.println("choice///////" + choice);
 		Connection con = null;
 		try {
@@ -50,10 +49,8 @@ public class select_sql {
 		} finally {
 			try {
 				con.close();
-
 			} catch (Exception e) {
 				e.printStackTrace();
-
 			}
 		}
 		return count;
@@ -61,7 +58,6 @@ public class select_sql {
 
 	public static void main(String[] args) {
 		String str = "";
-		// TODO Auto-generated method stub
 		select_sql selectmysql = new select_sql();
 
 		int a = selectmysql.select(1, "联系人：  童先生 ", "13966693776");

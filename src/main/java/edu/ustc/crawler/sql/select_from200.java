@@ -32,7 +32,7 @@ public class select_from200 {
 					resnum = "  ";
 				}
 				//    String b = connu.getString("LXR");
-				//  List.add(resnum);			    
+				//  List.add(resnum);
 				//   System.out.println("aa///////"+resnum+b);
 				count++;
 			}
@@ -43,10 +43,8 @@ public class select_from200 {
 		} finally {
 			try {
 				con.close();
-
 			} catch (Exception e) {
 				e.printStackTrace();
-
 			}
 		}
 		System.out.println("resultListresultList" + resnum);

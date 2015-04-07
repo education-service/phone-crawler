@@ -12,20 +12,17 @@ import org.htmlcleaner.XPatherException;
 import zx.soft.utils.codec.URLCodecUtils;
 import edu.ustc.crawler.web.gethtml;
 import edu.ustc.crawler.zwfc.Crawler;
-//import org.apache.http.client.HttpClient;
-//import org.apache.commons.httpclient.HttpClient;
-//import org.apache.commons.httpclient.HttpException;
-//import org.apache.commons.httpclient.HttpStatus;
 
 public class phoneDirectory {
+
 	private static String BASE_XPATH = "//*[@id=\"";
 	private static String SUFFIX_XPATH = "\"]/h3/a";
 	private static String XASE_XPATH = "//*[@id=\"";
 	private static String XUFFIX_XPATH = "\"]/div[1]";
 
 	private static String base1[] = { "http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=13966693776&rsv_pq=951e7309000a96aa&rsv_t=1dfcXVmY7LnTqe0HrqZCoVFrgwOLKcQBrlKzZ3ZTgWyO%2FdqssbN%2FLqdjSqE" };
-
 	private static String content, ppath, phonenun, xpath;
+
 	public static int result = 0;
 	public static int count = 0;
 
@@ -63,6 +60,7 @@ public class phoneDirectory {
 		}
 		System.out.println("JJhh" + result);
 		System.out.println("baseurlbaseurl" + baseurl);
+
 		return result;
 	}
 
@@ -73,18 +71,15 @@ public class phoneDirectory {
 		try {
 			Crawler crawler = new Crawler(baseurll);
 			for (int j = 1; j < count + 1; j++) {
-
 				if (j == 1) {
 					xpath = "//*[@id=\"1\"]/div[1]/div/div[2]/div[1]/span";
 					String title = crawler.parserByXpath(xpath);
 				} else {
 					xpath = BASE_XPATH + j + SUFFIX_XPATH;
 					pageurl = crawler.getNodeUrl(xpath, "href");
-
 					if (pageurl != null) {
 						pageurl = pageurl;
 					}
-
 					String title = crawler.parserByXpath(xpath);
 					if (title != null) {
 						title = title;
@@ -92,14 +87,13 @@ public class phoneDirectory {
 					}
 					System.out.println(pageurl);
 					System.out.println(title);
-
 					//			     String path="E:\\mmm"+j+".txt";
 					//			     File file = new File(path);
 					//			     if(!file.exists()){
 					//					file.createNewFile();
 					//					  }
 					//				 OutputStreamWriter dos1 = new OutputStreamWriter(new  FileOutputStream(file,true));
-					//				 BufferedWriter eos1=new BufferedWriter(dos1); 
+					//				 BufferedWriter eos1=new BufferedWriter(dos1);
 
 					//			      eos1.write(pageurl);
 					//			      eos1.write('\r'); // \r\n表示换行
@@ -108,9 +102,8 @@ public class phoneDirectory {
 					//			      eos1.write('\r'); // \r\n表示换行
 					//				  eos1.write('\n');
 					//				  eos1.flush();
-					//			      eos1.close(); 
+					//			      eos1.close();
 					//	};
-
 					jp.nexturl = pageurl;
 					System.out.println(pageurl);
 					if (pageurl != " ") {
@@ -120,19 +113,17 @@ public class phoneDirectory {
 					}
 				}
 			}
-			;
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (XPatherException e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	public static void main(String[] args) {
 
 		try {
-			File phonefile = new File("E:\\手机号码.txt");//文件路径
+			File phonefile = new File("手机号码.txt"); // 文件路径
 			FileReader fr = new FileReader(phonefile);
 			BufferedReader br = new BufferedReader(fr);
 
@@ -150,5 +141,7 @@ public class phoneDirectory {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 	}
+
 }

@@ -14,6 +14,7 @@ import edu.ustc.crawler.web.gethtml;
 import edu.ustc.crawler.zwfc.Crawler;
 
 public class qqDirectory {
+
 	private static String BASE_XPATH = "//*[@id=\"";
 	private static String SUFFIX_XPATH = "\"]/h3/a";
 	private static String XASE_XPATH = "//*[@id=\"";
@@ -55,11 +56,11 @@ public class qqDirectory {
 			System.out.println("The String does not contain a parsable integer");
 		}
 		System.out.println("JJhh" + result);
+
 		return result;
 	}
 
 	public void getweb(String baseurl, String qq) {
-
 		count = countitem(baseurl);
 		try {
 			Crawler crawler = new Crawler(baseurl);
@@ -75,7 +76,7 @@ public class qqDirectory {
 				String title = crawler.parserByXpath(xpath);
 				if (title != null) {
 					title = title;
-					//title="链接标题"+"是："+title;	
+					//title="链接标题"+"是："+title;
 				}
 				//System.out.println(email);
 				System.out.println("pageurl" + pageurl);
@@ -117,5 +118,7 @@ public class qqDirectory {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 	}
+
 }

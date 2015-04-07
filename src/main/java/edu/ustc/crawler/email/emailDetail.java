@@ -36,22 +36,22 @@ public class emailDetail {
 	public String strtelephone = "", strqq = "", straddress = "", stremail = "", strname = "", strweb = "";
 
 	public void getUrl(String url) throws IOException {
-		//String key=url.split("/W")[1];
+		// String key=url.split("/W")[1];
 		Crawler crawler = new Crawler(url);
 		try {
 			System.out.println("hhhhhhhhhhhh" + k);
 
-			//k=k+1;
+			// k=k+1;
 			ppath = BASE_XPATH + k + SUFFIX_XPATH;
 			content = crawler.parserByXpath(ppath);
 			if (content != null)
-				//content="内容摘要是："+content;
+				// content="内容摘要是："+content;
 				content = content;
 			System.out.println("content" + content);
 			// String path="E:\\mmm"+k+".txt";
 
-			//System.out.println(ppath);
-			//String path="E:\\mm"+k+".txt";
+			// System.out.println(ppath);
+			// String path="E:\\mm"+k+".txt";
 
 			String path = "E:\\mmm" + k + ".txt";
 			File file = new File(path);
@@ -65,12 +65,10 @@ public class emailDetail {
 			eos.write('\n');
 			eos.flush();
 			eos.close();
-			//System.out.println(k);
+			// System.out.println(k);
 			// toTxt.toTXT(tvtitle,"d:\\yangshi.txt");
-
 		} catch (Exception e) {
 			e.printStackTrace();
-
 		}
 	}
 
@@ -97,10 +95,8 @@ public class emailDetail {
 			OutputStreamWriter dos = new OutputStreamWriter(new FileOutputStream(file, true));
 			BufferedWriter eos = new BufferedWriter(dos);
 
-			while ((line = reader.readLine()) != null)
-
-			{
-				//result=line+result;
+			while ((line = reader.readLine()) != null) {
+				// result=line+result;
 				System.out.println(">>" + line);
 				Document doc;
 				doc = Jsoup.parse(line);
@@ -225,7 +221,6 @@ public class emailDetail {
 				Insert_mysql xiaohe = new Insert_mysql();
 				xiaohe.insertemail(querynum, strname, strtelephone, straddress, strqq, stremail, "");
 			}
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

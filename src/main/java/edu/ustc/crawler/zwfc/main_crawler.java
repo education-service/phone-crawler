@@ -15,6 +15,7 @@ import edu.ustc.crawler.qq.qqDirectory;
 import edu.ustc.crawler.sql.select_from200;
 
 public class main_crawler {
+
 	public static String phoneLine = "";
 	public static String emailLine = "";
 	public static String qqLine = "";
@@ -33,10 +34,10 @@ public class main_crawler {
 		//		  select_from200 sel=new select_from200();
 		//		  sell = sel.selectphone(initnum);
 		//		  resultList.add(sell);
-		//	      initnum++;	  
+		//	      initnum++;
 		//	   }
 		//	   System.out.println("resultListresultList"+resultList);
-		//	
+		//
 		//	  phoneDirectory dc = new phoneDirectory();
 		//	  //遍历获得手机号码的信息
 		//	  Iterator<String> it=resultList.iterator();
@@ -47,7 +48,7 @@ public class main_crawler {
 		//	     System.out.println("/////"+url);
 		//         dc.getweb(url,queryphone);
 		//         queryphone="";
-		//         
+		//
 		//	  }
 
 		//deal_email();

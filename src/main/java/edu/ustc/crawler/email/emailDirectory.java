@@ -14,15 +14,16 @@ import edu.ustc.crawler.web.gethtml;
 import edu.ustc.crawler.zwfc.Crawler;
 
 public class emailDirectory {
+
 	private static String BASE_XPATH = "//*[@id=\"";
 	private static String SUFFIX_XPATH = "\"]/h3/a";
 	private static String XASE_XPATH = "//*[@id=\"";
 	private static String XUFFIX_XPATH = "\"]/div[1]";
-	//public static String strXmlLine = "";
 
 	private static String base1[] = { "http://www.baidu.com/s?wd=yawei%40xinyajx.com&rsv_spt=1&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=site888_3_pg&bs=LYC%40hzlasiji.com" };
 
 	private static String content, ppath, phonenun, xpath;
+
 	public static int result = 0;
 	emailDetail jp = new emailDetail();
 
@@ -34,7 +35,7 @@ public class emailDirectory {
 		// int result=0;
 		try {
 			String num = gethtml.Gethtml(baseurl);
-			//System.out.println("///////"+exhtml);
+			// System.out.println("///////"+exhtml);
 
 			System.out.println("resres" + num);
 
@@ -67,7 +68,7 @@ public class emailDirectory {
 				String pageurl = crawler.getNodeUrl(xpath, "href");
 
 				if (pageurl != null) {
-					//pageurl="相关链接网址"+"是："+pageurl;
+					// pageurl="相关链接网址"+"是："+pageurl;
 					pageurl = pageurl;
 				}
 
@@ -75,9 +76,9 @@ public class emailDirectory {
 
 				if (title != null) {
 					title = title;
-					//title="链接标题"+"是："+title;
+					// title="链接标题"+"是："+title;
 				}
-				//System.out.println(email);
+				// System.out.println(email);
 				System.out.println(pageurl);
 				System.out.println(title);
 
@@ -98,7 +99,7 @@ public class emailDirectory {
 	public static void main(String[] args) {
 
 		try {
-			File emailfile = new File("E:\\邮箱.txt");//文件路径
+			File emailfile = new File("邮箱.txt"); //文件路径
 			FileReader fr = new FileReader(emailfile);
 			BufferedReader br = new BufferedReader(fr);
 
@@ -118,5 +119,7 @@ public class emailDirectory {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 	}
+
 }

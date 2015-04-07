@@ -7,9 +7,8 @@ import java.sql.Statement;
 public class Insert_mysql {
 
 	public void insert(String type, String querynum, String lianxiren, String telephonenum, String address, String qq,
-			String email, String websource)
-	//String signname,String realname,String nickname,String lianxiren,String age,String sex,String telephonenum,String phonepicture,String address,String duty,String area,String qq,String email,String websource,String dataresource,String deletedd)
-	{
+			String email, String websource) {
+		//String signname,String realname,String nickname,String lianxiren,String age,String sex,String telephonenum,String phonepicture,String address,String duty,String area,String qq,String email,String websource,String dataresource,String deletedd)
 		Connection con = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -30,18 +29,15 @@ public class Insert_mysql {
 		} finally {
 			try {
 				con.close();
-
 			} catch (Exception e) {
 				e.printStackTrace();
-
 			}
 		}
 	}
 
 	public void insertemail(String querytelephone, String lianxiren, String telephonenum, String address, String qq,
-			String email, String websource)
-	//String signname,String realname,String nickname,String lianxiren,String age,String sex,String telephonenum,String phonepicture,String address,String duty,String area,String qq,String email,String websource,String dataresource,String deletedd)
-	{
+			String email, String websource) {
+		//String signname,String realname,String nickname,String lianxiren,String age,String sex,String telephonenum,String phonepicture,String address,String duty,String area,String qq,String email,String websource,String dataresource,String deletedd)
 		Connection con = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -62,18 +58,15 @@ public class Insert_mysql {
 		} finally {
 			try {
 				con.close();
-
 			} catch (Exception e) {
 				e.printStackTrace();
-
 			}
 		}
 	}
 
 	public void insertqq(String querytelephone, String lianxiren, String telephonenum, String address, String qq,
-			String email, String websource)
-	//String signname,String realname,String nickname,String lianxiren,String age,String sex,String telephonenum,String phonepicture,String address,String duty,String area,String qq,String email,String websource,String dataresource,String deletedd)
-	{
+			String email, String websource) {
+		//String signname,String realname,String nickname,String lianxiren,String age,String sex,String telephonenum,String phonepicture,String address,String duty,String area,String qq,String email,String websource,String dataresource,String deletedd)
 		Connection con = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -93,23 +86,20 @@ public class Insert_mysql {
 		} finally {
 			try {
 				con.close();
-
 			} catch (Exception e) {
 				e.printStackTrace();
-
 			}
 		}
 	}
 
 	public static void main(String[] args) {
 		String str = "";
-		// TODO Auto-generated method stub
 		Insert_mysql zz = new Insert_mysql();
 		try {
 			str = new String("周智".getBytes(), "utf-8");
 			System.out.println(str);
 		} catch (Exception e) {
-
+			//
 		}
 		Insert_mysql xiaohe1 = new Insert_mysql();
 		// xiaohe1.insert("emailresult","hh", "strname",  "strtelephone", "straddress", "strqq", "stremail", "");

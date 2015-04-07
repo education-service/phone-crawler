@@ -27,17 +27,14 @@ public class Update_mysql {
 		} finally {
 			try {
 				con.close();
-
 			} catch (Exception e) {
 				e.printStackTrace();
-
 			}
 		}
 	}
 
 	public static void main(String[] args) {
 		String str = "";
-		// TODO Auto-generated method stub
 		Insert_mysql zz = new Insert_mysql();
 		try {
 			str = new String("周智".getBytes(), "utf-8");

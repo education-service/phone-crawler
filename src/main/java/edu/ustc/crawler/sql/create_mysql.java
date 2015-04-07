@@ -27,18 +27,14 @@ public class create_mysql {
 		} finally {
 			try {
 				con.close();
-
 			} catch (Exception e) {
 				e.printStackTrace();
-
 			}
 		}
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		create_mysql zz = new create_mysql();
-
 		zz.create();
 	}
 

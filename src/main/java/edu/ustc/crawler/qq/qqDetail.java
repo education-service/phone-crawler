@@ -21,10 +21,11 @@ import edu.ustc.crawler.sql.select_sql;
 import edu.ustc.crawler.zwfc.Crawler;
 
 public class qqDetail {
+
 	private static String BASE_XPATH = "//*[@id=\"";
 	private static String SUFFIX_XPATH = "\"]/div[1]";
 	private static String SE_XPATH = "\"]/div[1]/div[2]/div[1]";
-	//private  String baseurl1="http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=530180782%40qq.com%20&rsv_pq=c78e320500021ac6&rsv_t=e01czvoDW99AvvyKJeA8rpJPmhuj4lA6bDv1PAWzPwwRYuwXcjq7ktO9KAM&rsv_enter=0&rsv_sug3=1&rsv_sug4=520&rsv_sug1=1";
+	// private  String baseurl1="http://www.baidu.com/s?ie=utf-8&f=8&rsv_bp=1&rsv_idx=1&tn=baidu&wd=530180782%40qq.com%20&rsv_pq=c78e320500021ac6&rsv_t=e01czvoDW99AvvyKJeA8rpJPmhuj4lA6bDv1PAWzPwwRYuwXcjq7ktO9KAM&rsv_enter=0&rsv_sug3=1&rsv_sug4=520&rsv_sug1=1";
 	private Crawler crawler;
 	public int k = 0;
 	public static String NO_MSG = "null";
@@ -66,12 +67,9 @@ public class qqDetail {
 			eos.close();
 			//System.out.println(k);
 			// toTxt.toTXT(tvtitle,"d:\\yangshi.txt");
-
 		} catch (Exception e) {
 			e.printStackTrace();
-
 		}
-
 	}
 
 	public void getContent() {
@@ -173,7 +171,7 @@ public class qqDetail {
 					stremail = matcher_detail4.group();
 					System.out.println("///email" + matcher_detail4.group());
 				}
-				// stremail="";    
+				// stremail="";
 
 				Pattern patt_detail41 = Pattern.compile("email：(.*?) ");
 				Matcher matcher_detail41 = patt_detail41.matcher(result);
@@ -189,7 +187,7 @@ public class qqDetail {
 					strname = matcher_detail5.group();
 					System.out.println("///name" + matcher_detail5.group());
 				}
-				// strname="";   	 
+				// strname="";
 
 				Pattern patt_detail6 = Pattern.compile("联系人：(.*?) ");
 				Matcher matcher_detail6 = patt_detail6.matcher(result);
@@ -197,7 +195,7 @@ public class qqDetail {
 					strname = matcher_detail6.group();
 					System.out.println("///name" + matcher_detail6.group());
 				}
-				//strname=""; 
+				//strname="";
 
 				/******匹配网址*******************/
 				Pattern patt_detail8 = Pattern.compile("网址：(.*?) ");
@@ -206,7 +204,7 @@ public class qqDetail {
 					strweb = matcher_detail8.group();
 					System.out.println("///name" + matcher_detail8.group());
 				}
-				// strname="";   	 
+				// strname="";
 				Pattern patt_detail81 = Pattern.compile("网站：(.*?) ");
 				Matcher matcher_detail81 = patt_detail81.matcher(result);
 				while (matcher_detail81.find()) {
@@ -215,7 +213,6 @@ public class qqDetail {
 				}
 
 				System.out.println("yyyyyyyyyyy" + result);
-
 			}
 
 			System.out.println("@@@@@@2" + selNum + strname + strtelephone + straddress + strqq + stremail);
@@ -226,7 +223,6 @@ public class qqDetail {
 				Insert_mysql xiaohe = new Insert_mysql();
 				xiaohe.insertqq(selNum, strname, strtelephone, straddress, strqq, stremail, "");
 			}
-
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
